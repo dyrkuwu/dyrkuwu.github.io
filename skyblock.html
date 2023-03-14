@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>dyrks cool bio</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .texts {
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      color: white;
+      font-size: 32px;
+      text-align: center;
+      
+    }
+
+    .ass:hover {
+      background-color: white;
+      color: lightpink;
+      transition: all 0.3s ease-in-out;
+    }
+
+    body {
+      background-color: lightpink;
+    }
+
+    .ad-container {
+      position: fixed;
+      border: 2px solid white;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .mainn {
+      width: 50%;
+      margin: 0 auto;
+      align-items: center;
+      width: 80%;
+      height: 80%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .ad-container:hover {
+      transform: scale(1.1);
+    }
+
+    .ad-container-left {
+      top: 10px;
+      left: 10px;
+    }
+
+    .ad-container-right {
+      top: 10px;
+      right: 10px;
+    }
+
+    .ad-image {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .ad-text {
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      color: white;
+      font-size: 14px;
+    }
+
+    header {
+  background-color: pink;
+  font-family: Comic Sans MS;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  background-color: pink;
+  color: white;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: pink;
+}
+
+  </style>
+</head>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/games.html">My games</a></li>
+      <li><a href="/stuff.html">Stuff</a></li>
+      <li><a href="#">Placeholder</a></li>
+      <li><a href="#">Placeholder</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<body>
+  <div onclick="window.location.href=''" class="ad-container ad-container-left">
+    <img class="ad-image" src="https://gif.plaza.one/78.gif" alt="Fake Ad 1">
+    <p class="ad-text">Buy Now!</p>
+  </div>
+  
+  <div onclick="window.location.href=''" class="ad-container ad-container-right">
+    <img class="ad-image" src="https://gif.plaza.one/79.gif" alt="Fake Ad 2">
+    <p class="ad-text">Limited Time Offer!</p>
+  </div>
+  <div class="mainn">
+    <ul class="texts">
+      <li>
+        <a class="ass">this page is heavy wip</a>
+      </li>
+    </ul>
+
+  </div>
+</body>
+
+</html>
