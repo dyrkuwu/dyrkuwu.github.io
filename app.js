@@ -1,6 +1,6 @@
 // Get audio element and control buttons
 const audio = document.getElementById("song");
-const playBtn = document.querySelector(".playBtn");
+const playBtn = document.getElementById("playBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const stopBtn = document.getElementById("stopBtn");
 const seekSlider = document.querySelector("seekSlider");
@@ -16,49 +16,58 @@ function formatTime(time) {
   return formattedTime;
 }
 
-// Play audio
-playBtn.addEventListener("click", function() {
-  if (audio.currentTime === 0) {
-    audio.currentTime = seekSlider.value; // Set the current time to the slider value
-  }
-  audio.play();
-  songTitle.textContent = 'Pet in TV OST - M2'
+if (playBtn) {
+    playBtn.addEventListener("click", function() {
+    if (audio.currentTime === 0) {
+        audio.currentTime = seekSlider.value; // Set the current time to the slider value
+    }
+    audio.play();
+    songTitle.textContent = 'Pet in TV OST - M2'
 });
 
+}
+
+if (pauseBtn) {
 // Pause audio
-pauseBtn.addEventListener("click", function() {
-  audio.pause();
-});
+    pauseBtn.addEventListener("click", function() {
+    audio.pause();
+    });
 
-// Stop audio and reset slider
-stopBtn.addEventListener("click", function() {
-  audio.pause();
-  audio.currentTime = 0;
-  seekSlider.value = 0;
-});
+}
 
-// Update slider position as audio plays
-audio.addEventListener("timeupdate", function() {
-  if (!isSeeking) {
-    seekSlider.value = audio.currentTime;
-  }
-  timeLabel.textContent = formatTime(audio.currentTime);
-});
+if (stopBtn) {
+    stopBtn.addEventListener("click", function() {
+    audio.pause();
+    audio.currentTime = 0;
+    seekSlider.value = 0;
+    });
+}
 
-// Update audio position when slider is moved
-seekSlider.addEventListener("input", function() {
-  isSeeking = true;
-  audio.currentTime = Math.floor(seekSlider.value);
-  console.log(audio.currentTime);
-});
+if (audio) {
+    audio.addEventListener("timeupdate", function() {
+    if (!isSeeking) {
+        seekSlider.value = audio.currentTime;
+    }
+    timeLabel.textContent = formatTime(audio.currentTime);
+    });
+}
 
-// Update slider max value when audio is loaded
-audio.addEventListener("loadedmetadata", function() {
-  seekSlider.max = audio.duration;
-});
+if (seekSlider) {
+    seekSlider.addEventListener("input", function() {
+    isSeeking = true;
+    audio.currentTime = Math.floor(seekSlider.value);
+    console.log(audio.currentTime);
+    });
+}
 
-// Update isSeeking flag when slider drag ends
-seekSlider.addEventListener("change", function() {
-  isSeeking = false;
-});
+if (audio) {
+    audio.addEventListener("loadedmetadata", function() {
+    seekSlider.max = audio.duration;
+    });
+}
 
+if (seekSlider) {
+    seekSlider.addEventListener("change", function() {
+    isSeeking = false;
+    });
+}

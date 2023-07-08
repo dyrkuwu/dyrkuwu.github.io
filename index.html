@@ -38,21 +38,20 @@
     </div>
     <div class="window-body">
       <div class="audio-player">
-        
         <audio id="song" src="/goober.mp3"></audio>
         <div class="slider field-row">
           <input type="range" id="seekSlider" min="0" step="0.01" value="0" />
           <label for="seekSlider" class="time-crnt">00:00</label>
         </div>
         <div class="controls">
-          <button class="playBtn">Play</button>
+          <button id="playBtn">Play</button>
           <button id="pauseBtn">Pause</button>
           <button id="stopBtn">Stop</button>
         </div>
-        
+        <script src="script.js"></script>
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+
 </body>
 </html>
