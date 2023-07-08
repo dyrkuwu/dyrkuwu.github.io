@@ -49,6 +49,7 @@ if (audio && timeLabel && seekSlider) {
         seekSlider.value = audio.currentTime;
     }
     timeLabel.textContent = formatTime(audio.currentTime);
+    
     });
 }
 
@@ -63,6 +64,7 @@ if (seekSlider && audio) {
 if (audio && seekSlider) {
     audio.addEventListener("loadedmetadata", function() {
       seekSlider.max = audio.duration;
+      console.log(audio.duration);
     });
   }
 
