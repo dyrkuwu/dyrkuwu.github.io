@@ -3,7 +3,7 @@ const audio = document.getElementById("song");
 const playBtn = document.getElementById("playBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const stopBtn = document.getElementById("stopBtn");
-const seekSlider = document.querySelector("seekSlider");
+const seekSlider = document.getElementById("seekSlider");
 const timeLabel = document.querySelector(".time-crnt");
 const songTitle = document.querySelector(".song-title");
 
