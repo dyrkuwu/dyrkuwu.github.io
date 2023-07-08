@@ -60,11 +60,11 @@ if (seekSlider) {
     });
 }
 
-if (audio) {
+if (audio && seekSlider) {
     audio.addEventListener("loadedmetadata", function() {
-    seekSlider.max = audio.duration;
+      seekSlider.max = audio.duration;
     });
-}
+  }
 
 if (seekSlider) {
     seekSlider.addEventListener("change", function() {
