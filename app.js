@@ -62,10 +62,15 @@ if (seekSlider && audio) {
 }
 
 if (audio && seekSlider) {
-    audio.addEventListener("loadedmetadata", function() {
+    if (audio.readyState >= 1) {
+      // Metadata already loaded
       seekSlider.max = audio.duration;
-      console.log(audio.duration);
-    });
+    } else {
+      // Wait for metadata to load
+      audio.addEventListener("loadedmetadata", function() {
+        seekSlider.max = audio.duration;
+      });
+    }
   }
 
 if (seekSlider) {
