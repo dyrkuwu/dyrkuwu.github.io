@@ -24,8 +24,8 @@
 </head>
 
 <body>
-  <div class="window draggable" style="margin: 122px; width: 280px; height: 120px">
-    <div class="title-bar">
+  <div class="window song-window" style="margin: 122px; width: 280px; height: 120px">
+    <div class="title-bar song-window-bar">
       <div class="title-bar-text">
         <a class="song-title" style="color: white;">hello :3</a>
       </div>
@@ -53,8 +53,8 @@
       </div>
     </div>
   </div>
-  <div class="window draggable" style="width: 400px; height: 350px;">
-    <div class="title-bar">
+  <div class="window img-window" style="width: 400px; height: 350px;">
+    <div class="title-bar img-window-bar">
       <div class="title-bar-text">silly images</div>
       <div class="title-bar-controls">
         <button aria-label="Minimize"></button>
@@ -67,8 +67,11 @@
     </div>
   </div>
   <script>
-    const draggableWindow = new Draggable(document.querySelector('.draggable'), {
-      handle: document.querySelector('.title-bar')
+    const draggableWindowSong = new Draggable(document.querySelector('.song-window'), {
+      handle: document.querySelector('.song-window-bar')
+    });
+    const draggableWindowImg = new Draggable(document.querySelector('.img-window'), {
+      handle: document.querySelector('.img-window-bar')
     });
   </script>
 </body>
