@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <div class="window draggable" style="margin: 122px; width: 280px; height: 120px">
+  <div class="window song-window" style="margin: 122px; width: 280px; height: 120px">
     <div class="title-bar">
       <div class="title-bar-text">
         <a class="song-title" style="color: white;">hello :3</a>
@@ -50,14 +50,18 @@
         <script src="https://unpkg.com/draggable@4.2.0/dist/draggable.min.js"></script>
         <script src="app.js"></script>
         <script>
-          const draggableWindow = new Draggable(document.querySelector('.draggable'), {
+          const draggableWindowSong = new Draggable(document.querySelector('.song-window'), {
+            handle: document.querySelector('.title-bar')
+          });
+
+          const draggableWindowPictures = new Draggable(document.querySelector('.img-window'), {
             handle: document.querySelector('.title-bar')
           });
         </script>
       </div>
     </div>
   </div>
-  <div class="window draggable" style="width: 400px; height: 350px;">
+  <div class="window img-window" style="width: 400px; height: 350px;">
     <div class="title-bar">
       <div class="title-bar-text">silly images</div>
       <div class="title-bar-controls">
