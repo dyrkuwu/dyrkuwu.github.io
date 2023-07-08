@@ -16,7 +16,7 @@ function formatTime(time) {
   return formattedTime;
 }
 
-if (playBtn && audio) {
+if (playBtn && audio && seekSlider) {
     playBtn.addEventListener("click", function() {
     if (audio.currentTime === 0) {
         audio.currentTime = seekSlider.value; // Set the current time to the slider value
@@ -35,7 +35,7 @@ if (pauseBtn && audio) {
 
 }
 
-if (stopBtn && audio) {
+if (stopBtn && audio && seekSlider) {
     stopBtn.addEventListener("click", function() {
     audio.pause();
     audio.currentTime = 0;
@@ -43,7 +43,7 @@ if (stopBtn && audio) {
     });
 }
 
-if (audio && timeLabel) {
+if (audio && timeLabel && seekSlider) {
     audio.addEventListener("timeupdate", function() {
     if (!isSeeking) {
         seekSlider.value = audio.currentTime;
