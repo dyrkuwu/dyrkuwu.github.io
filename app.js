@@ -1,9 +1,9 @@
 // Get audio element and control buttons
 const audio = document.getElementById("song");
-const playBtn = document.getElementById("playBtn");
+const playBtn = document.querySelector(".playBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const stopBtn = document.getElementById("stopBtn");
-const seekSlider = document.getElementById("seekSlider");
+const seekSlider = document.querySelector("seekSlider");
 const timeLabel = document.querySelector(".time-crnt");
 const songTitle = document.querySelector(".song-title");
 
