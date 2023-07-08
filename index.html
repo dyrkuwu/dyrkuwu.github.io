@@ -1,27 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>dyrks space</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>98.css example</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  <script src="/app.js"></script>
   <style>
-    @font-face {
-      font-family: 'Agave Nerd Font';
-      src: url('AgaveNerdFont-Regular.ttf') format('truetype');
+    .audio-player {
+      width: 250px;
+      margin: 10px;
+      margin-top: 20px;
     }
     
-    body {
-      font-family: 'Agave Nerd Font', sans-serif;
-      background-color: lightpink;
-      color: white;
+    .slider {
+      margin: 10px 0;
+      padding: 10px;
     }
+    
+    .controls button {
+      margin-right: 5px;
+    }
+    
   </style>
 </head>
 
 <body>
-  <p>hello! my name is dyrk aka [insert one of my 9999 alts]. i am a [minor] years trans girl, i like coding, mainly in python. im from [a bad county]. im obsessed with tboi, murder drones, deltarune and tf2.</p>
-</body>
+  <div class="window" style="margin: 122px; width: 280px; height: 120px">
+    <div class="title-bar">
+      <div class="title-bar-text">
+        <a class="song-title" style="color: white;">hello :3</a>
+      </div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="audio-player">
+        <audio id="song" src="/goober.mp3"></audio>
+        <div class="slider field-row">
+          <input type="range" id="seekSlider" min="0" step="0.01" value="0" />
+          <label for="seekSlider" class="time-crnt">00:00</label>
+        </div>
+        <div class="controls">
+          <button id="playBtn">Play</button>
+          <button id="pauseBtn">Pause</button>
+          <button id="stopBtn">Stop</button>
+        </div>
+        <script src="script.js"></script>
+      </div>
+    </div>
+  </div>
 
+</body>
 </html>
