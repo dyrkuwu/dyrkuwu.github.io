@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <a class="bg-text" style="top: 2px; right: 2px; font-size: larger; color: white;">i got too silly</a>
+  <label class="bg-text" style="top: 2px; left: 2px; font-size: larger; color: white;">i got too silly</label>
   <div class="window song-window" style="margin: 122px; width: 280px; height: 120px">
     <div class="title-bar song-window-bar">
       <div class="title-bar-text">
@@ -55,6 +55,22 @@
         <script src="https://unpkg.com/draggable@4.2.0/dist/draggable.min.js"></script>
         <script src="app.js"></script>
         
+      </div>
+    </div>
+  </div>
+  <div class="window typebox-window" style="width: 300px">
+    <div class="title-bar">
+      <div class="title-bar-text">dyrk-ai</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="field-row-stacked" style="width: 200px">
+        <label for="typingbox">this ai was trained to act as dyrk</label>
+        <textarea id="typingbox" rows="8"></textarea>
       </div>
     </div>
   </div>
