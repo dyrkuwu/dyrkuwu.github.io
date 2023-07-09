@@ -59,7 +59,7 @@
     </div>
   </div>
   <div class="window typebox-window" style="width: 300px">
-    <div class="title-bar">
+    <div class="title-bar typebox-window-bar">
       <div class="title-bar-text">dyrk-ai</div>
       <div class="title-bar-controls">
         <button aria-label="Minimize"></button>
@@ -102,9 +102,9 @@
     const draggableWindowSong = new Draggable(document.querySelector('.song-window'), {
       handle: document.querySelector('.song-window-bar')
     });
-    //const draggableWindowImg = new Draggable(document.querySelector('.img-window'), {
-      //handle: document.querySelector('.img-window-bar')
-    //});
+    const draggableWindowTB = new Draggable(document.querySelector('.typebox-window'), {
+      handle: document.querySelector('.typebox-window-bar')
+    });
   </script>
 </body>
 </html>
