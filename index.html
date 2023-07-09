@@ -122,7 +122,7 @@
 
             const adjective = await getRandomWord(adjectiveUrl);
             const noun = await getRandomWord(nounUrl);
-            const randomInt = Math.floor(Math.random() * 10);
+            const randomInt = Math.floor(Math.random() * 100);
 
             const capitalizedAdjective = adjective.charAt(0).toUpperCase() + adjective.slice(1);
             const capitalizedNoun = noun.charAt(0).toUpperCase() + noun.slice(1);
