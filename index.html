@@ -52,7 +52,7 @@
     </div>
     <div class="window-body">
       <div class="audio-player">
-        <audio id="song" src="/goober.mp3"></audio>
+        <audio id="song" src="goober.mp3"></audio>
         <div class="slider field-row">
           <input type="range" id="seekSlider" min="0" step="0.01" value="0" />
           <label for="seekSlider" class="time-crnt">00:00</label>
@@ -68,7 +68,7 @@
       </div>
     </div>
   </div>
-  <div class="window typebox-window" style="width: 300px">
+  <div class="window typebox-window" style="width: 300px; position: absolute; top: 20%; right: 20%; transform: translate(-20%, -20%);">
     <div class="title-bar typebox-window-bar">
       <div class="title-bar-text">dyrk-ai</div>
       <div class="title-bar-controls">
@@ -84,7 +84,7 @@
       </div>
     </div>
   </div>
-    <div class="window offlchat-window" style="width: 400px; height: 400px;">
+    <div class="window offlchat-window" style="width: 400px; height: 400px; position: absolute; top: 20%; left: 10%; transform: translate(-20%, -30%);">
       <div class="title-bar offlchat-window-bar">
         <div class="title-bar-text">Offline Chat</div>
         <div class="title-bar-controls">
@@ -96,24 +96,64 @@
       <div class="window-body">
         <div class="field-row-stacked">
           <label for="chatlog">Chat</label>
-          <textarea readonly id="chatlog" rows="8" style="height: 350px; width: 390px;"></textarea>
+          <textarea readonly id="chatlog" rows="8" style="height: 300px; width: 390px;"></textarea>
         </div>
         <div class="field-row-stacked" style="width: 380px">
-          <label for="textinput"> --------------------- </label>
+          <label for="textinput">Online: 497k users.</label>
           <input id="textinput" type="text" />
         </div>
         <script>
           var messageInput = document.getElementById("textinput");
           var messageContainer = document.getElementById("chatlog");
-          
+
+          var randomNickname = ""; // Variable to store the random nickname
+
+          async function getRandomWord(url) {
+            const response = await fetch(url);
+            const text = await response.text();
+            const lines = text.split('\n');
+            const filteredLines = lines.filter(word => word.length < 7);
+            return filteredLines[Math.floor(Math.random() * filteredLines.length)];
+          }
+
+          async function generateRandomString() {
+            const adjectiveUrl = 'https://raw.githubusercontent.com/taikuukaits/SimpleWordlists/master/Wordlist-Adjectives-All.txt';
+            const nounUrl = 'https://raw.githubusercontent.com/taikuukaits/SimpleWordlists/master/Wordlist-Nouns-All.txt';
+
+            const adjective = await getRandomWord(adjectiveUrl);
+            const noun = await getRandomWord(nounUrl);
+            const randomInt = Math.floor(Math.random() * 10);
+
+            const capitalizedAdjective = adjective.charAt(0).toUpperCase() + adjective.slice(1);
+            const capitalizedNoun = noun.charAt(0).toUpperCase() + noun.slice(1);
+
+            return capitalizedAdjective + capitalizedNoun + randomInt;
+          }
+
           function sendMessage() {
             var message = messageInput.value.trim();
-          
+
             if (message !== "") {
-              messageContainer.value = messageContainer.value + '\n'
-          
+              if (randomNickname === "") {
+                // Generate random nickname if not already generated
+                generateRandomString().then(nickname => {
+                  randomNickname = nickname;
+                  sendMessageWithNickname(message);
+                });
+              } else {
+                // Use the existing random nickname
+                sendMessageWithNickname(message);
+              }
+              
               messageContainer.scrollTop = messageContainer.scrollHeight;
             }
+          }
+
+          function sendMessageWithNickname(message) {
+            // Append the random string (nickname), message, and a new line to the message container
+            const fullMessage = randomNickname + ": " + message + '\n';
+            messageContainer.value += fullMessage;
+            messageInput.value = ''
           }
 
           messageInput.addEventListener("keydown", function (event) {
@@ -121,6 +161,7 @@
               sendMessage();
             }
           });
+
         </script>
       </div>
     </div>
