@@ -29,6 +29,19 @@
 
 <body>
   <label class="bg-text" style="top: 40px; right: 40px; font-size: 32px; color: white; position: fixed;">i got too silly</label>
+  <script>
+    const bgLabel = document.querySelector(".bg-text");
+  
+    function updateText() {
+      bgLabel.textContent = `i g${Math.floor(Math.random() * 100)}%t too silly`;
+    }
+  
+    // Call the function initially
+    updateText();
+  
+    // Call the function every 3 seconds (adjust the interval as needed)
+    setInterval(updateText, 10);
+  </script>
   <div class="window song-window" style="margin: 500px; width: 280px; height: 120px">
     <div class="title-bar song-window-bar">
       <div class="title-bar-text">
