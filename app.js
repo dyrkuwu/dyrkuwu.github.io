@@ -84,25 +84,3 @@ if (volumeSlider && audio && volumeLabel) {
   });
 }
 
-function simulateTyping() {
-  var characters = 'abcdefghijklmnopqrstuvwxyz    ';
-  var typingSpeed = 100;
-  var pauseDuration = 2000;
-  var typingElement = document.getElementById('typingbox');
-  var currentText = typingElement.value;
-  var randomCharacter = characters.charAt(Math.floor(Math.random() * characters.length));
-  typingElement.value = currentText + (randomCharacter);
-  var isSpace = (randomCharacter === ' ');
-  var typingDelay = Math.floor(Math.random() * typingSpeed) + 50;
-  typingElement.scrollTop = typingElement.scrollHeight;
-
-  setTimeout(function () {
-    if (isSpace) {
-      setTimeout(simulateTyping, pauseDuration);
-    } else {
-      simulateTyping();
-    }
-  }, typingDelay);
-}
-
-window.onload = simulateTyping;
