@@ -33,7 +33,7 @@
     const bgLabel = document.querySelector(".bg-text");
   
     function updateText() {
-      bgLabel.textContent = `i g${Math.floor(Math.random() * 100)}%t too silly`;
+      bgLabel.textContent = `i g${Math.floor(Math.random() * 10)}t too silly`;
     }
   
     // Call the function initially
@@ -42,7 +42,7 @@
     // Call the function every 3 seconds (adjust the interval as needed)
     setInterval(updateText, 10);
   </script>
-  <div class="window song-window" style="margin: 500px; width: 280px; height: 120px">
+  <div class="window song-window" style="margin-top: 50%; margin-left: 50%; width: 280px; height: 120px">
     <div class="title-bar song-window-bar">
       <div class="title-bar-text">
         <a class="song-title" style="color: white;">hello :3</a>
