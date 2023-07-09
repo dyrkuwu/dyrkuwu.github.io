@@ -35,11 +35,8 @@
     function updateText() {
       bgLabel.textContent = `i g${Math.floor(Math.random() * 10)}t too silly`;
     }
-  
-    // Call the function initially
+
     updateText();
-  
-    // Call the function every 3 seconds (adjust the interval as needed)
     setInterval(updateText, 100);
   </script>
   <div class="window song-window" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 280px; height: 120px">
@@ -83,7 +80,47 @@
     <div class="window-body">
       <div class="field-row-stacked" style="width: 200px">
         <label for="typingbox">this ai was trained to act as dyrk</label>
-        <textarea id="typingbox" style="height: 110px; width: 290px; resize: none;" rows="8"></textarea>
+        <textarea readonly id="typingbox" style="height: 110px; width: 290px; resize: none;" rows="8"></textarea>
+      </div>
+    </div>
+    <div class="window offlchat-window" style="width: 400px; height: 400px;">
+      <div class="title-bar offlchat-window-bar">
+        <div class="title-bar-text">Offline Chat</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="field-row-stacked" style="width: 380px; height: 380px;">
+          <label for="chatlog">Chat</label>
+          <textarea readonly id="chatlog" rows="8"></textarea>
+        </div>
+        <div class="field-row-stacked" style="width: 380px">
+          <label for="textinput"> --------------------- </label>
+          <input id="textinput" type="text" />
+        </div>
+        <script>
+          var messageInput = document.getElementById("textinput");
+          var messageContainer = document.getElementById("chatlog");
+          
+          function sendMessage() {
+            var message = messageInput.value.trim();
+          
+            if (message !== "") {
+              messageContainer.value = messageContainer.value + '\n'
+          
+              messageContainer.scrollTop = messageContainer.scrollHeight;
+            }
+          }
+
+          messageInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+              sendMessage();
+            }
+          });
+        </script>
       </div>
     </div>
     <script>
@@ -115,8 +152,13 @@
     const draggableWindowSong = new Draggable(document.querySelector('.song-window'), {
       handle: document.querySelector('.song-window-bar')
     });
+
     const draggableWindowTB = new Draggable(document.querySelector('.typebox-window'), {
       handle: document.querySelector('.typebox-window-bar')
+    });
+
+    const draggableWindowOfflChat = new Draggable(document.querySelector('.offlchat-window'), {
+      handle: document.querySelector('.offlchat-window-bar')
     });
   </script>
 </body>
