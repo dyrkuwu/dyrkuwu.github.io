@@ -1,4 +1,3 @@
-// Select the container div and tabs
 var buttonContainer = document.querySelector('.win-btns');
 var tabs = document.querySelectorAll('.tab');
 

@@ -112,5 +112,11 @@ body {
 
 p, a, button {
     text-shadow: 0.5px 0.5px var(--contrast-color);
-    mix-blend-mode: lighten;
+}
+
+.chaos {
+    position: absolute;
+    box-shadow: 13px 13px 0px rgba(0, 0, 0, 0.5);
+    right: 200px;
+    top: 70%;
 }
