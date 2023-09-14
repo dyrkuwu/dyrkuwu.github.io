@@ -32,7 +32,7 @@ body {
 .main-view {
     position: fixed;
     left: 20%; 
-    transform: translate(50%, 25%); 
+    transform: translate(50%, 15%); 
 }
 
 .win-body {
