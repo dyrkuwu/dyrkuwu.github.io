@@ -1,356 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>dyrk's space</title>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="https://unpkg.com/98.css" />
-  <style>
-    body {
-      background-color: lightpink;
-      background-image: url('/38.gif');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-
-    .audio-player {
-      width: 250px;
-      margin: 10px;
-      margin-top: 20px;
-    }
-    
-    .slider {
-      margin: 10px 0;
-      padding: 10px;
-    }
-    
-    .controls button {
-      margin-right: 5px;
-    }
-
-    .terminal-scroller::-webkit-scrollbar {
-        display: none;
-    }
-    
-
-  </style>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/98.css">
-  <style>
-    .cmd-clipboard {
-      display: none;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="window song-window" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 280px; height: 120px">
-    <div class="title-bar song-window-bar">
-      <div class="title-bar-text">
-        <a class="song-title" style="color: white;">hello :3</a>
-      </div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close"></button>
-      </div>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>dyrkwebz</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="main-view">
+    <div class="win-btns">
+      <button>Aimbot</button>
+      <button>Visuals</button>
+      <button>Misc</button>
+      <button>Config</button>
     </div>
-    <div class="window-body">
-      <div class="audio-player">
-        <audio id="song" src="goober.mp3"></audio>
-        <div class="slider field-row">
-          <input type="range" id="seekSlider" min="0" step="0.01" value="0" />
-          <label for="seekSlider" class="time-crnt">00:00</label>
-        </div>
-        <div class="controls">
-          <button id="playBtn">Play</button>
-          <button id="pauseBtn">Pause</button>
-          <button id="stopBtn">Stop</button>
-        </div>
-        <script src="https://unpkg.com/draggable@4.2.0/dist/draggable.min.js"></script>
-        <script src="app.js"></script>
-        
-      </div>
-    </div>
-  </div>
-    <div class="window typebox-window" style="width: 300px; position: absolute; top: 20%; right: 20%; transform: translate(-20%, -20%);">
-      <div class="title-bar typebox-window-bar">
-        <div class="title-bar-text">dyrk-ai</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
-        </div>
-      </div>
-      <div class="window-body">
-        <div class="field-row-stacked" style="width: 200px">
-          <label for="typingbox">this ai was trained to act as dyrk</label>
-          <textarea readonly id="typingbox" style="height: 110px; width: 290px; resize: none;" rows="8"></textarea>
-        </div>
-      </div>
-    </div>
-    <!-- 
-    <div class="window terminal-window" style="width: 400px; position: absolute; top: 20%; right: 20%; transform: translate(-40%, -20%); height: 350px;">
-      <div class="title-bar terminal-window-bar">
-        <div class="title-bar-text">cmd.exe</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
-        </div>
-      </div>
-      <div class="window-body">
-
-      <div class="content" style="width: 390px; height: 320px; "></div>
     
-        <script>
-          var fs = {
-            'projects': {
-              'kit.png': 'https://placekitten.com/200/300',
-              'baz.txt': 'Hello this is file baz.txt',
-              'quux.txt': "Lorem Ispum (quux.txt)",
-              'foo.txt': "Hello, World!",
-              'bar.txt': "Wellcome to the bar",
-              "terminal": {
-                "foo": {
-                  "bar.txt": "hello bar",
-                  "baz.txt": "baz content"
-                }
-              }
-            }
-          };
+    <div class="win-body">
+      <div class="tab">
+        <div style="margin: 10px; height: 40px; border: #8d8d8d solid 1px;">
+          <a href="#" class="weapon-btn">aWXYZ</a>
+        </div>
+        <div class="group">
+          <p style="margin: 10px;">hi! my name is dyrk, and im ur average human garbage cheater.</p>
+          <p style="margin: 10px;">i spend most of my time coding or watching yt videos.</p>
+          <p style="margin: 10px;">my favorite languages are: py, js and c++.</p>
+          <p style="margin: 10px;">now more personal stuff: im trans and my pronouns are she/they :3</p>
+          <p style="margin: 10px;">my favorite games are: deltarune, tf2 and tboi</p>
+          <p style="margin: 10px;">if you ever see me in a game, please say hi :) </p>
+        </div>
+        <div class="group">
+          <iframe width="240" height="240" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+        </div>
+        <img src="hitboxes.png" style="position: absolute; top: 130px; left: 310px; width: 200px; height: 450px;">
+      </div>
+      <div class="tab" style="display: none;">wip</div>
+      <div class="tab" style="display: none;">wip</div>
+      <div class="tab" style="display: none;">wip</div>
       
-          var path = [];
-          var cwd = fs;
-          function restore_cwd(fs, path) {
-            path = path.slice();
-            while (path.length) {
-              var dir_name = path.shift();
-              if (!is_dir(fs[dir_name])) {
-                throw new Error('Internal Error Invalid directory ' +
-                  $.terminal.escape_brackets(dir_name));
-              }
-              fs = fs[dir_name];
-            }
-            return fs;
-          }
-          function is_dir(obj) {
-            return typeof obj === 'object';
-          }
-          function is_file(obj) {
-            return typeof obj === 'string';
-          }
-          function is_img(obj) {
-            console.log(obj);
-            return (is_file(obj) && (obj.endsWith(".png") || obj.endsWith(".jpg") || obj.endsWith(".webp")))
-          }
-          function is_txt(obj) {
-            console.log(obj);
-            return (is_file(obj) && obj.endsWith(".txt"))
-          }
-          var commands = {
-            cd: function (dir) {
-              this.pause();
-              if (dir === '/') {
-                path = [];
-                cwd = restore_cwd(fs, path);
-              } else if (dir === '..') {
-                if (path.length) {
-                  path.pop();
-                  cwd = restore_cwd(fs, path);
-                }
-              } else if (dir.match(/\//)) {
-                var p = dir.replace(/\/$/, '').split('/').filter(Boolean);
-                if (dir[0] !== '/') {
-                  p = path.concat(p);
-                }
-                cwd = restore_cwd(fs, p);
-                path = p;
-              } else if (!is_dir(cwd[dir])) {
-                this.error($.terminal.escape_brackets(dir) + ' is not a directory');
-              } else {
-                cwd = cwd[dir];
-                path.push(dir);
-              }
-              this.resume();
-            },
-            ls: function () {
-              if (!is_dir(cwd)) {
-                throw new Error('Internal Error Invalid directory');
-              }
-              var dir = Object.keys(cwd).map(function (key) {
-                if (is_dir(cwd[key])) {
-                  return key + '/';
-                }
-                return key;
-              });
-              this.echo(dir.join('\n'));
-            },
-            cat: function (file) {
-              if (!is_txt(file)) {
-                this.error($.terminal.escape_brackets(file) + " don't exists");
-              } else {
-                this.echo(cwd[file]);
-              }
-            },
-            feh: function (file) {
-              if (!is_img(file)) {
-                this.error($.terminal.escape_brackets(file) + " don't exists");
-              } else {
-                const img = $('<img src=' + cwd[file] + '>');
-                this.echo(img);
-              }
-            },
-            help: function () {
-              this.echo('Available commands: ' + Object.keys(commands).join(', '));
-            }
-          };
-      
-          var term = $('.content').terminal(commands, {
-            prompt: prompt(),
-            greetings: 'Microsoft<R> Windows 98\n<C>Copyright Microsoft Corp 1998-1999.'
-          });
-          function prompt(type) {
-            return function (callback) {
-              var prompt;
-              prompt = 'C:\\' + path.join('\\') + '> ';
-              callback(prompt);
-            };
-          }
-      
-      
-        </script>
-      </div>
     </div>
-    --> 
-    <div class="window offlchat-window" style="width: 400px; height: 400px; position: absolute; top: 20%; left: 10%; transform: translate(-20%, -30%);">
-      <div class="title-bar offlchat-window-bar">
-        <div class="title-bar-text">Offline Chat</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
-        </div>
-      </div>
-      <div class="window-body">
-        <div class="field-row-stacked">
-          <label for="chatlog">Chat</label>
-          <textarea readonly id="chatlog" rows="8" style="height: 300px; width: 390px;"></textarea>
-        </div>
-        <div class="field-row-stacked" style="width: 380px">
-          <label for="textinput">Offline: 497k users.</label>
-          <input id="textinput" type="text" />
-        </div>
-        <script>
-          var messageInput = document.getElementById("textinput");
-          var messageContainer = document.getElementById("chatlog");
-
-          var randomNickname = ""; // Variable to store the random nickname
-
-          async function getRandomWord(url) {
-            const response = await fetch(url);
-            const text = await response.text();
-            const lines = text.split('\n');
-            const filteredLines = lines.filter(word => word.length < 7);
-            return filteredLines[Math.floor(Math.random() * filteredLines.length)];
-          }
-
-          async function generateRandomString() {
-            const adjectiveUrl = 'https://raw.githubusercontent.com/taikuukaits/SimpleWordlists/master/Wordlist-Adjectives-All.txt';
-            const nounUrl = 'https://raw.githubusercontent.com/taikuukaits/SimpleWordlists/master/Wordlist-Nouns-All.txt';
-
-            const adjective = await getRandomWord(adjectiveUrl);
-            const noun = await getRandomWord(nounUrl);
-            const randomInt = Math.floor(Math.random() * 100);
-
-            const capitalizedAdjective = adjective.charAt(0).toUpperCase() + adjective.slice(1);
-            const capitalizedNoun = noun.charAt(0).toUpperCase() + noun.slice(1);
-
-            return capitalizedAdjective + capitalizedNoun + randomInt;
-          }
-
-          function sendMessage() {
-            var message = messageInput.value.trim();
-
-            if (message !== "") {
-              if (randomNickname === "") {
-                // Generate random nickname if not already generated
-                generateRandomString().then(nickname => {
-                  
-                  randomNickname = nickname;
-                  sendMessageWithNickname(message);
-                });
-              } else {
-                // Use the existing random nickname
-                sendMessageWithNickname(message);
-              }
-              
-              messageContainer.scrollTop = messageContainer.scrollHeight;
-            }
-          }
-
-          function sendMessageWithNickname(message) {
-            
-
-            const fullMessage = randomNickname + ": " + message + '\n';
-            messageContainer.value += fullMessage;
-            messageInput.value = ''
-          }
-
-          messageInput.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
-              sendMessage();
-            }
-          });
-
-        </script>
-      </div>
     </div>
-    
-    <script>
-      function simulateTyping() {
-        var characters = 'abcdefghijklmnopqrstuvwxyz    ';
-        var typingSpeed = 100;
-        var pauseDuration = 2000;
-        var typingElement = document.getElementById('typingbox');
-        var currentText = typingElement.value;
-        var randomCharacter = characters.charAt(Math.floor(Math.random() * characters.length));
-        typingElement.value = currentText + (randomCharacter);
-        var isSpace = (randomCharacter === ' ');
-        var typingDelay = Math.floor(Math.random() * typingSpeed) + 50;
-        typingElement.scrollTop = typingElement.scrollHeight;
-  
-        setTimeout(function () {
-          if (isSpace) {
-            setTimeout(simulateTyping, pauseDuration);
-          } else {
-            simulateTyping();
-          }
-        }, typingDelay);
-      }
-  
-      window.onload = simulateTyping;
-    </script>
-  </div>
-  <script>
-    const draggableWindowSong = new Draggable(document.querySelector('.song-window'), {
-      handle: document.querySelector('.song-window-bar')
-    });
-
-    const draggableWindowTB = new Draggable(document.querySelector('.typebox-window'), {
-      handle: document.querySelector('.typebox-window-bar')
-    });
-
-    const draggableWindowOfflChat = new Draggable(document.querySelector('.offlchat-window'), {
-      handle: document.querySelector('.offlchat-window-bar')
-    });
-
-    const draggableWindowTerminal = new Draggable(document.querySelector('.terminal-window'), {
-      handle: document.querySelector('.terminal-window-bar')
-    });
-  </script>
-</body>
+    <script src="script.js" theme="dark" position="bottom-right"></script>
+  </body>
 </html>

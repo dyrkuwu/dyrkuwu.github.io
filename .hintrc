@@ -4,11 +4,10 @@
   ],
   "hints": {
     "no-inline-styles": "off",
-    "meta-viewport": "off",
-    "axe/language": [
+    "axe/text-alternatives": [
       "default",
       {
-        "html-has-lang": "off"
+        "image-alt": "off"
       }
     ]
   }
