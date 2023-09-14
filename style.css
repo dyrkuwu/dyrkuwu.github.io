@@ -109,3 +109,9 @@ body {
     text-decoration: none; /* Remove underline */
     color: inherit;
 }
+
+p, a, button {
+    -webkit-font-smoothing: none;
+    text-shadow: 0.5px 0.5px var(--contrast-color);
+    mix-blend-mode: lighten;
+}
